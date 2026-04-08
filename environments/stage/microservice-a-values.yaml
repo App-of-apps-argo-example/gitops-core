@@ -1,6 +1,6 @@
 image:
-  repository: 092568126647.dkr.ecr.eu-central-1.amazonaws.com/microservice-a
-  tag: 1b06728b9f4f5e807bd4a9863d70db2b588377fa
+  repository: 092568126647.dkr.ecr.eu-west-1.amazonaws.com/microservice-a
+  tag: v0.0.1
 replicaCount: 2
 service:
   port: 80
