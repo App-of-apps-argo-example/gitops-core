@@ -1,6 +1,6 @@
 image:
-  repository: ghcr.io/app-of-apps-argo-example/app-template
-  tag: v1.0.0
+  repository: 092568126647.dkr.ecr.eu-central-1.amazonaws.com/microservice-a
+  tag: 1b06728b9f4f5e807bd4a9863d70db2b588377fa
 replicaCount: 2
 service:
   port: 80
