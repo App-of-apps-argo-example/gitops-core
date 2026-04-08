@@ -1,7 +1,8 @@
+{{- range $appName, $appConfig := .Values.apps }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: microservice-a
+  name: {{ $appName }}-{{ $.Values.targetNamespace }}
   namespace: argocd
 spec:
   project: default
@@ -10,14 +11,19 @@ spec:
     targetRevision: main
     path: helm-org-charts/general-service
     helm:
-      valueFiles:
-      - ../../environments/stage/microservice-a-values.yaml
+      parameters:
+        - name: image.repository
+          value: {{ $appConfig.image.repository }}
+        - name: image.tag
+          value: {{ $appConfig.image.tag }}
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: stage
+    namespace: {{ $.Values.targetNamespace }}
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
-    - CreateNamespace=true
+      - CreateNamespace=true
+---
+{{- end }}

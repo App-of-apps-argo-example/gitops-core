@@ -1,0 +1,14 @@
+targetNamespace: prod
+apps:
+  microservice-a:
+    image:
+      repository: ghcr.io/app-of-apps-argo-example/microservice-a
+      tag: v1.0.0
+  microservice-b:
+    image:
+      repository: ghcr.io/app-of-apps-argo-example/microservice-b
+      tag: v1.0.0
+  microservice-c:
+    image:
+      repository: ghcr.io/app-of-apps-argo-example/microservice-c
+      tag: v1.0.0

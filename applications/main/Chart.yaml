@@ -1,0 +1,5 @@
+apiVersion: v2
+name: argo-apps
+description: App-of-Apps chart that generates ArgoCD Applications
+type: application
+version: 0.1.0

@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: platform-root
+  name: platform-prod
   namespace: argocd
 spec:
   project: default
@@ -9,6 +9,9 @@ spec:
     repoURL: 'https://github.com/App-of-apps-argo-example/gitops-core.git'
     targetRevision: main
     path: applications/main
+    helm:
+      valueFiles:
+      - values-prod.yaml
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: argocd

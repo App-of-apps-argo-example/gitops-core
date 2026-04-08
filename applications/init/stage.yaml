@@ -1,23 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: microservice-c
+  name: platform-stage
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: 'https://github.com/App-of-apps-argo-example/gitops-core.git'
     targetRevision: main
-    path: helm-org-charts/general-service
+    path: applications/main
     helm:
       valueFiles:
-      - ../../environments/stage/microservice-c-values.yaml
+      - values-stage.yaml
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: stage
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-    - CreateNamespace=true
