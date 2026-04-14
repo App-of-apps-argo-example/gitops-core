@@ -11,4 +11,4 @@ apps:
   microservice-c:
     image:
       repository: 092568126647.dkr.ecr.eu-west-1.amazonaws.com/microservice-c
-      tag: v0.0.2
+      tag: v0.0.1
