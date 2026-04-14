@@ -3,7 +3,7 @@ apps:
   microservice-a:
     image:
       repository: 092568126647.dkr.ecr.eu-west-1.amazonaws.com/microservice-a
-      tag: v0.0.2
+      tag: v0.0.3
   microservice-b:
     image:
       repository: 092568126647.dkr.ecr.eu-west-1.amazonaws.com/microservice-b
