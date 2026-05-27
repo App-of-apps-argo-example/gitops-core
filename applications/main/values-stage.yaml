@@ -2,5 +2,5 @@ apps:
   microservice-a:
     image:
       repository: 092568126647.dkr.ecr.eu-west-1.amazonaws.com/microservice-a
-      tag: v0.0.2-stage
+      tag: v0.0.3-stage
 targetNamespace: stage
