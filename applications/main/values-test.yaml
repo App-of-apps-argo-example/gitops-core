@@ -1,14 +1,6 @@
-targetNamespace: test
 apps:
   microservice-a:
     image:
       repository: 092568126647.dkr.ecr.eu-west-1.amazonaws.com/microservice-a
       tag: v0.0.3-test
-  microservice-b:
-    image:
-      repository: 092568126647.dkr.ecr.eu-west-1.amazonaws.com/microservice-b
-      tag: v0.0.2-test
-  microservice-c:
-    image:
-      repository: 092568126647.dkr.ecr.eu-west-1.amazonaws.com/microservice-c
-      tag: v0.0.2-test
+targetNamespace: test

@@ -1,14 +1,6 @@
-targetNamespace: prod
 apps:
   microservice-a:
     image:
       repository: 092568126647.dkr.ecr.eu-west-1.amazonaws.com/microservice-a
       tag: v0.0.4
-  microservice-b:
-    image:
-      repository: 092568126647.dkr.ecr.eu-west-1.amazonaws.com/microservice-b
-      tag: v0.0.1
-  microservice-c:
-    image:
-      repository: 092568126647.dkr.ecr.eu-west-1.amazonaws.com/microservice-c
-      tag: v0.0.1
+targetNamespace: prod
