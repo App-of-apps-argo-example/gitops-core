@@ -2,5 +2,5 @@ apps:
   microservice-a:
     image:
       repository: 092568126647.dkr.ecr.eu-west-1.amazonaws.com/microservice-a
-      tag: v0.0.6
+      tag: v0.0.7
 targetNamespace: prod
